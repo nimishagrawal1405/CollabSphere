@@ -24,6 +24,7 @@ onAuthStateChanged(auth, user => {
   currentUser = user;
   if (!user) {
     alert("Please log in to view/upload projects.");
+    window.location.href = "login.html";
     return;
   }
 
