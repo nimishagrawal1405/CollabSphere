@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <div class="register-container">
+    <form id="register-form" class="register-form">
+      <h2>Create Account</h2>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@domain.com" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required />
+      </div>
+      <button type="submit" id="register-btn">Register</button>
+      <p class="note">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBfrSQDp4hgwokM5cSAJTLtec9sAC64axw",
+      authDomain: "collab-sphere-b05f4.firebaseapp.com",
+      projectId: "collab-sphere-b05f4",
+      storageBucket: "collab-sphere-b05f4.appspot.com",
+      messagingSenderId: "319397548371",
+      appId: "1:319397548371:web:1f0c49429293822e1b91a6"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const form = document.getElementById('register-form');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Account created successfully!");
+          console.log(userCredential.user);
+          window.location.href = "Project.html";
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
+    });
+  </script>
+</body>
+</html>

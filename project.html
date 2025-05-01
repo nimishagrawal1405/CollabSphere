@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Hub</title>
+  <link rel="stylesheet" href="project.css" />
+  <style>
+    .header {
+      background-color: #0A0A0A;
+      color: #FFD700;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(217, 26, 77, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header .brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .header .nav a {
+      margin-left: 1.5rem;
+      font-size: 1rem;
+      color: #ffffff;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .header .nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #FFD700;
+      transition: width 0.3s;
+    }
+
+    .header .nav a:hover::after {
+      width: 100%;
+    }
+
+    .header .nav a:hover {
+      color: #FFD700;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header .nav {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html" style="color: #FFD700; text-decoration: none; font-size: 1.5em; font-weight: bold;">Collab Sphere</a>
+    <div class="nav">
+      <a href="project.html">Projects</a>
+      <a href="discussion.html">Discussion</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Projects</h1>
+    <div id="project-list"></div>
+
+    <h2>Upload Your Project</h2>
+    <form id="upload-form">
+      <input type="text" id="title" placeholder="Project Title" required />
+      <textarea id="description" placeholder="Project Description" required></textarea>
+      <input type="url" id="link" placeholder="Project Link" required />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

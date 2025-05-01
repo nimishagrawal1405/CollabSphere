@@ -1,0 +1,151 @@
+body {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .discussion-container {
+    background-color: #4B0D28;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(217, 26, 77, 0.5);
+  }
+  .messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #FFD700;
+    padding: 10px;
+    background-color: #0A0A0A;
+    border-radius: 8px;
+  }
+  .message {
+    padding: 6px;
+    margin-bottom: 5px;
+    background-color: #D91A4D;
+    border-radius: 6px;
+  }
+  #message-form {
+    display: flex;
+  }
+  #message-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+  }
+  button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #e6c200;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #0A0A0A;
+    color: white;
+    padding-top: 70px; /* Space for fixed header */
+  }
+
+  /* Header Styling */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    color: #FFD700;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .header nav a:hover {
+    color: #FFD700;
+  }
+
+  /* Discussion Area */
+  .discussion-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #4B0D28;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(217, 26, 77, 0.5);
+  }
+
+  .messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #FFD700;
+    padding: 10px;
+    background-color: #0A0A0A;
+    border-radius: 8px;
+  }
+
+  .message {
+    padding: 6px;
+    margin-bottom: 5px;
+    background-color: #D91A4D;
+    border-radius: 6px;
+  }
+
+  #message-form {
+    display: flex;
+  }
+
+  #message-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+  }
+
+  button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #e6c200;
+  }

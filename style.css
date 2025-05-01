@@ -1,0 +1,125 @@
+body {
+    overflow-x: hidden;
+    color: white;
+    margin: 0;
+    text-align: center;
+    background-color: black;
+    cursor: crosshair;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  p {
+    color: rgba(255,255,255, 0.5)
+  }
+  .header {
+    top: 42%;
+  }
+  .header-content {
+    padding: 50px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+  .footer {
+    bottom:3%;
+  }
+  .description {
+    color: gray;
+    padding-top: 50px;
+  }
+  a, a:hover, a:visited {
+    color: white;
+    text-decoration: none;
+  } 
+  /*.disable-selection {
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+     -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -webkit-touch-callout: none; 
+  }*/
+  h1::after {
+    font-size: 12px;
+    position:absolute;
+    top: 3px;
+    padding-left: 5px;
+    font-weight: 400;
+  }
+  h2::after {
+    content: '2';
+    font-size: 12px;
+    position:absolute;
+    top: 14px;
+    padding-left: 5px;
+  }
+  
+  .btn {
+    border-radius: 100px;
+    padding: 10px 25px;
+  }
+  .head {
+    background-color: #0A0A0A;
+    color: #FFD700;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(217, 26, 77, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .headerRight span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFD700;
+  }
+  
+  .headerLeft a {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .headerLeft a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #FFD700;
+    transition: width 0.3s;
+  }
+  
+  .headerLeft a:hover {
+    color: #FFD700;
+  }
+  
+  .headerLeft a:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .head {
+      flex-direction: column;
+      text-align: center;
+    }
+    .headerLeft {
+      margin-top: 0.5rem;
+    }
+    .headerLeft a {
+      margin: 0 1rem;
+    }
+  }
+  h1{
+    font-size: 2.9em;
+  }
+  

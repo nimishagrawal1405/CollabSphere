@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discussion Area</title>
+  <link rel="stylesheet" href="discussion.css" />
+  
+
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <a href="index.html" style="color: #FFD700; text-decoration: none; font-size: 1.5em; font-weight: bold;">Collab Sphere</a>
+    <nav>
+      <a href="project.html">Projects</a>
+      <a href="discussion.html">Discussion</a>
+      
+    </nav>
+  </div>
+
+  <!-- Discussion Area -->
+  <div class="discussion-container">
+    <h2>Public Discussion</h2>
+    <div id="messages" class="messages"></div>
+    <form id="message-form">
+      <input type="text" id="message-input" placeholder="Type a message..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script type="module" src="discussion.js"></script>
+</body>
+</html>
